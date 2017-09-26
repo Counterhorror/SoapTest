@@ -22,9 +22,7 @@ namespace SoapTest
         // TODO: Add your service operations here
         [OperationContract]
         double SuperCalc(double value1, double value2, out double value3, out double value4, out double value5);
-
-        [OperationContract]
-        double DllCalc(double value1, double value2, out double Sub, out double Div, out double Mul);
+        
     }
 
 

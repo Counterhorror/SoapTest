@@ -5,7 +5,7 @@ using System.Runtime.Serialization;
 using System.ServiceModel;
 using System.ServiceModel.Web;
 using System.Text;
-using MathCalc;
+
 
 namespace SoapTest
 {
@@ -17,7 +17,7 @@ namespace SoapTest
         {
             return string.Format("You entered: {0}", value);
         }
-        private MathCalc.Calculations _calc = new Calculations();
+        
 
         public CompositeType GetDataUsingDataContract(CompositeType composite)
         {
@@ -41,12 +41,6 @@ namespace SoapTest
             return value1 + value2;
         }
 
-        public double DllCalc(double value1, double value2, out double Sub, out double Div, out double Mul)
-        {
-            Sub = _calc.Subtraction(value1, value2);
-            Div = _calc.Divide(value1, value2);
-            Mul = _calc.Multiply(value1, value2);
-            return _calc.Addition(value1, value2);
-        }
+        
     }
 }
